@@ -1,0 +1,13 @@
+html, body {
+    margin:0;
+}
+@font-face {
+    font-family: "Rancho";
+    src: url(https://fonts.googleapis.com/css2?family=Rancho&display=swap);
+}
+.page {
+    width:90%;
+    margin:0 auto;
+}
+@import "../content/standards/navigation/navigation";
+@import "../content/elements/hero/hero";
