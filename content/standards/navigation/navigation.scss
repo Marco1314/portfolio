@@ -1,93 +1,100 @@
 .navigation {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  &__mobile {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+    flex-direction: column;
     position: sticky;
-    top:0;
-    width:90%;
-    &__mobile {
-        width:calc(100% - 40px);
-        padding-left:20px;
-        padding-right: 20px;
-        display:none;
-        flex-direction: column;
-        position: sticky;
-        @media screen and (min-width: 576px){
-            width:calc(100% - 200px);
-            padding-left:100px;
-            padding-right: 100px;
-        }
-
-        .menu {
-            ul {
-                list-style-type: none;
-                display: flex;
-                flex-direction: column;
-                padding: 0;
-                li {
-                    padding-bottom: 7px;
-                    margin-top:25px;
-                    text-align: center;   
-                    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-                    box-shadow: 5px 5px 15px 5px #000000;     
-                    &:first-child {
-                        margin:0;
-                    }
-                    a {
-                        position: relative;
-                        color:black;
-                        text-decoration: none;
-                        font-family: "Rancho";
-                        font-size: 30px;
-                        text-shadow: 1px 0px 30px rgba(153, 150, 150, 1);
-
-                        @media screen and (min-width:576px) {
-                            font-size: 50px;
-                        }
-                    }
-                }
-            }
-        }
+    @media screen and (min-width: 576px) {
+      width: calc(100% - 200px);
+      padding-left: 100px;
+      padding-right: 100px;
     }
+
+    .menu {
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        li {
+          padding-bottom: 7px;
+          margin-top: 25px;
+          text-align: center;
+          -webkit-box-shadow: 5px 5px 15px 5px #000000;
+          box-shadow: 5px 5px 15px 5px #000000;
+          &:first-child {
+            margin: 0;
+          }
+          a {
+            position: relative;
+            color: black;
+            text-decoration: none;
+            font-family: "Rancho";
+            font-size: 30px;
+            text-shadow: 1px 0px 30px rgba(153, 150, 150, 1);
+
+            @media screen and (min-width: 576px) {
+              font-size: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .toggle {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
 
-    &__line {
-        height:10px;
-        width:70px;
-        background-color: black;
-        margin-top:10px;
+  &__line {
+    height: 10px;
+    width: 70px;
+    background-color: black;
+    margin-top: 10px;
 
-        &:first-of-type {
-            margin:0;
-        }
+    &:first-of-type {
+      margin: 0;
     }
-    &:hover {
-        cursor: pointer;
-    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
 .d-flex {
-    display:flex;
+  display: flex;
 }
-
 
 .animate-in {
-    animation-name: menue-in;
-    animation-duration: 1s;
-    animation-fill-mode: forwards !important;
+  animation-name: menue-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards !important;
 }
 .animate-out {
-    animation-name: menue-out;
-    animation-duration: 1s; 
-    animation-fill-mode: forwards !important;
+  animation-name: menue-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards !important;
 }
 
 @keyframes menue-in {
-    from { transform: translateX(-100%);}
-    to { transform: translateX(0%);}
+  from {
+    transform: translateX(-100%);
   }
+  to {
+    transform: translateX(0%);
+  }
+}
 @keyframes menue-out {
-    from { transform: translateX(0%);}
-    to { transform: translateX(-100%);}
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

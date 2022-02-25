@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let links = navigation.querySelectorAll(".menu ul li a")
     let hero = document.getElementsByClassName("hero")[0];
     let showing = false;
+    let textimageHeadline = document.getElementsByClassName("textimage__headline")[0];
+    let textimage__imageContainer = document.getElementsByClassName("textimage__imageContainer")[0];
+    let textimage__textContainer = document.getElementsByClassName("textimage__textContainer")[0];
     toggle.addEventListener("click", function() {
         navigation.classList.toggle("d-flex");
         if(showing == false) {
@@ -37,5 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 list.style.backgroundColor = "transparent";
             }
         }
+
+        if(window.scrollY >= textimageHeadline.offsetTop) {
+            textimage__imageContainer.classList.add("left-animation");
+            textimage__textContainer.classList.add("right-animation");
+        }
     })
-})
+});
